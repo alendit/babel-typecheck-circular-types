@@ -8,7 +8,7 @@ type B = {
   As: Array<A>;
 }
 
-function addBstoA(a: A, b: Array<B>): A {
+function addBstoA(a: A, b: Array<B>): A /* typecheck works when return type is removed */ {
   b.forEach(b => {
     b.As.push(a);
     a.Bs.push(b);
